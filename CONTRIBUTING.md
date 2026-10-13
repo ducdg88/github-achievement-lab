@@ -1,0 +1,52 @@
+# Hướng dẫn đóng góp | Contributing
+
+Cảm ơn anh em đã đóng góp cho GitHub Achievement Lab.
+
+Thank you for contributing to GitHub Achievement Lab.
+
+## Quy tắc | Rules
+
+- Mỗi pull request chỉ giải quyết một mục tiêu.
+- Không gửi secret, token, mật khẩu hoặc dữ liệu cá nhân.
+- Không thêm phụ thuộc nếu chưa giải thích lý do.
+- Mọi thay đổi hành vi cần có cách kiểm tra rõ ràng.
+- Viết nội dung công khai bằng tiếng Việt và tiếng Anh khi phù hợp.
+
+- Keep each pull request focused on one goal.
+- Never submit secrets, tokens, passwords, or personal data.
+- Explain any new dependency before adding it.
+- Include clear verification steps for behavior changes.
+- Use Vietnamese and English for public content when appropriate.
+
+## Quy trình | Workflow
+
+1. Mở issue mô tả bối cảnh và kết quả mong muốn.
+2. Tạo branch từ `main`, ví dụ `docs/improve-readme`.
+3. Thực hiện thay đổi nhỏ, dễ review.
+4. Chạy kiểm tra liên quan.
+5. Gửi pull request, ghi rõ thay đổi và bằng chứng.
+6. Trả lời review trước khi merge.
+
+1. Open an issue with context and expected outcome.
+2. Create a branch from `main`, for example `docs/improve-readme`.
+3. Make a small, reviewable change.
+4. Run the relevant checks.
+5. Open a pull request with changes and evidence.
+6. Address review comments before merging.
+
+## Mẫu báo cáo kiểm tra | Verification format
+
+```text
+Checks:
+- command: <command>
+- result: <pass or details>
+
+Manual check:
+- <what was verified>
+```
+
+## Phạm vi | Scope
+
+Repo này là một phòng lab độc lập. Không thay đổi hoặc phụ thuộc vào các dự án khác của DUCPT.
+
+This repository is an independent lab. Do not modify or depend on DUCPT's other projects.
