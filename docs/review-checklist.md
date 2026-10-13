@@ -26,13 +26,17 @@ Check each rule in `CONTRIBUTING.md`; do not use one aggregate checkbox:
 
 - [ ] Secret, token, mật khẩu và dữ liệu cá nhân: đạt hoặc ghi finding.
 - [ ] Phụ thuộc mới: đạt hoặc ghi lý do và finding.
+- [ ] Thay đổi hành vi: có cách kiểm tra rõ ràng hoặc ghi `N/A`.
 - [ ] Phạm vi đường dẫn: đạt hoặc ghi finding.
-- [ ] Ngôn ngữ và nội dung công khai: đạt hoặc ghi finding.
+- [ ] Nội dung tiếng Việt và tiếng Anh khi phù hợp: đạt hoặc ghi finding.
+- [ ] Ký tự gạch dài trong nội dung công khai: đạt hoặc ghi finding.
 
 - [ ] Secrets, tokens, passwords, and personal data: pass or record a finding.
 - [ ] New dependencies: pass or record the reason and finding.
+- [ ] Behavior changes have a clear verification method or are marked `N/A`.
 - [ ] Path scope: pass or record a finding.
-- [ ] Language and public content: pass or record a finding.
+- [ ] Vietnamese and English public content when appropriate: pass or record a finding.
+- [ ] Long dash characters in public content: pass or record a finding.
 
 ## Kiểm tra | Verification
 
