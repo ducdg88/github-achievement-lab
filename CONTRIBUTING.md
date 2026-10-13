@@ -10,13 +10,17 @@ Thank you for contributing to GitHub Achievement Lab.
 - Không gửi secret, token, mật khẩu hoặc dữ liệu cá nhân.
 - Không thêm phụ thuộc nếu chưa giải thích lý do.
 - Mọi thay đổi hành vi cần có cách kiểm tra rõ ràng.
+- Không để đường dẫn file thoát khỏi phạm vi repo.
 - Viết nội dung công khai bằng tiếng Việt và tiếng Anh khi phù hợp.
+- Nội dung công khai không dùng ký tự gạch dài.
 
 - Keep each pull request focused on one goal.
 - Never submit secrets, tokens, passwords, or personal data.
 - Explain any new dependency before adding it.
 - Include clear verification steps for behavior changes.
+- Keep file paths inside the repository scope.
 - Use Vietnamese and English for public content when appropriate.
+- Do not use long dash characters in public content.
 
 ## Quy trình | Workflow
 
@@ -36,9 +40,9 @@ Thank you for contributing to GitHub Achievement Lab.
 
 ## Mẫu báo cáo kiểm tra | Verification format
 
-Dùng [review checklist](docs/review-checklist.md) trước khi gửi PR.
+Dùng [review checklist](docs/review-checklist.md) trong giai đoạn review, trước khi merge.
 
-Use the [review checklist](docs/review-checklist.md) before submitting a PR.
+Use the [review checklist](docs/review-checklist.md) during review, before merging.
 
 ```text
 Checks:
