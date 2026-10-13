@@ -36,6 +36,10 @@ Thank you for contributing to GitHub Achievement Lab.
 
 ## Mẫu báo cáo kiểm tra | Verification format
 
+Dùng [review checklist](docs/review-checklist.md) trước khi gửi PR.
+
+Use the [review checklist](docs/review-checklist.md) before submitting a PR.
+
 ```text
 Checks:
 - command: <command>
