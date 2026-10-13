@@ -4,9 +4,9 @@ Dùng checklist này trong giai đoạn review, trước khi merge.
 
 Use this checklist during review, before merging.
 
-`CONTRIBUTING.md` là nguồn chuẩn của repo cho các quy tắc về secret, dữ liệu, phụ thuộc, đường dẫn và nội dung công khai.
+`CONTRIBUTING.md` là nguồn chuẩn của repo cho quy tắc chung. Checklist này là nguồn chuẩn cho bằng chứng review và quyết định merge.
 
-`CONTRIBUTING.md` is the repository source of truth for secrets, data, dependencies, paths, and public content.
+`CONTRIBUTING.md` is the repository source of truth for general rules. This checklist is the source of truth for review evidence and the merge decision.
 
 ## Nội dung | Content
 
@@ -20,37 +20,52 @@ Use this checklist during review, before merging.
 
 ## An toàn | Safety
 
-- [ ] Đã đối chiếu và đáp ứng toàn bộ mục `Quy tắc | Rules` trong `CONTRIBUTING.md`.
-- [ ] The full `Rules` section in `CONTRIBUTING.md` has been checked and satisfied.
+Đối chiếu từng quy tắc trong `CONTRIBUTING.md`, không dùng một checkbox tổng hợp:
+
+Check each rule in `CONTRIBUTING.md`; do not use one aggregate checkbox:
+
+- [ ] Secret, token, mật khẩu và dữ liệu cá nhân: đạt hoặc ghi finding.
+- [ ] Phụ thuộc mới: đạt hoặc ghi lý do và finding.
+- [ ] Phạm vi đường dẫn: đạt hoặc ghi finding.
+- [ ] Ngôn ngữ và nội dung công khai: đạt hoặc ghi finding.
+
+- [ ] Secrets, tokens, passwords, and personal data: pass or record a finding.
+- [ ] New dependencies: pass or record the reason and finding.
+- [ ] Path scope: pass or record a finding.
+- [ ] Language and public content: pass or record a finding.
 
 ## Kiểm tra | Verification
 
 - [ ] Đã chạy các kiểm tra liên quan.
-- [ ] Với mỗi kiểm tra, PR ghi rõ lệnh hoặc công cụ, phạm vi, output và đường dẫn artifact, hoặc ghi rõ không có artifact.
+- [ ] Với mỗi kiểm tra, PR ghi rõ lệnh hoặc công cụ, input set, phạm vi, output và đường dẫn artifact, hoặc ghi rõ không có artifact.
+- [ ] Bằng chứng ghi rõ `base SHA`, `head SHA` và thời điểm UTC; phải chạy lại sau commit mới nhất.
 - [ ] Link nội bộ và file mới đều tồn tại.
-- [ ] Secret scan bao phủ toàn bộ commit thuộc PR, file sinh ra và artifact, không chỉ cây file cuối hoặc net diff.
-- [ ] Không có ký tự gạch dài trong nội dung công khai.
+- [ ] Secret scan dùng công cụ đã nêu, bao phủ toàn bộ commit thuộc PR, file sinh ra và artifact, không chỉ cây file cuối hoặc net diff.
+- [ ] Long-dash scan bao phủ cây file hiện tại, lịch sử commit, file sinh ra, artifact và nội dung PR nếu có.
 
 - [ ] Relevant checks were run.
-- [ ] For every check, the PR records the command or tool, scope, output, and artifact path, or explicitly states that no artifact exists.
+- [ ] For every check, the PR records the command or tool, input set, scope, output, and artifact path, or explicitly states that no artifact exists.
+- [ ] Evidence records the `base SHA`, `head SHA`, and UTC timestamp; checks are rerun after the latest commit.
 - [ ] Internal links and new files exist.
-- [ ] The secret scan covers every commit in the PR, generated files, and artifacts, not only the final tree or net diff.
-- [ ] Public content contains no long dash characters.
+- [ ] The named scanner covers every commit in the PR, generated files, and artifacts, not only the final tree or net diff.
+- [ ] The long-dash scan covers the current tree, commit history, generated files, artifacts, and PR text when applicable.
 
 ## Quyết định | Decision
 
 - [ ] Reviewer đã đọc diff, không chỉ đọc mô tả.
+- [ ] Đã ghi trạng thái cổng GitHub: required checks, approvals và ruleset/branch protection; mục nào chưa bật phải ghi `N/A, chưa cấu hình`, không được gọi là đã enforce.
 - [ ] Tất cả check bắt buộc đều đạt, hoặc có ghi rõ check không áp dụng.
-- [ ] Đã có đủ approval theo yêu cầu của repo.
-- [ ] Branch đã cập nhật, không còn conflict.
+- [ ] Đã có đủ approval theo yêu cầu của repo, nếu repo yêu cầu.
+- [ ] Bằng chứng được chạy lại với commit head mới nhất và branch không còn conflict.
 - [ ] Không còn finding blocking chưa xử lý.
 - [ ] Finding không blocking còn lại có owner và trạng thái rõ ràng.
-- [ ] PR đủ điều kiện merge.
+- [ ] PR đủ điều kiện merge chỉ sau khi các cổng áp dụng đã được xác minh.
 
 - [ ] The reviewer read the diff, not only the description.
+- [ ] The GitHub gate state is recorded: required checks, approvals, and ruleset or branch protection; any disabled gate is marked `N/A, not configured`, not claimed as enforced.
 - [ ] All required checks pass, or inapplicable checks are explicitly documented.
-- [ ] Required approvals are present for the repository.
-- [ ] The branch is up to date and has no conflicts.
+- [ ] Required approvals are present when the repository requires them.
+- [ ] Evidence was rerun against the latest head commit and the branch has no conflicts.
 - [ ] No unresolved blocking finding remains.
 - [ ] Remaining non-blocking findings have a clear owner and state.
-- [ ] The PR is ready to merge.
+- [ ] The PR is ready to merge only after applicable gates are verified.

@@ -46,8 +46,12 @@ Use the [review checklist](docs/review-checklist.md) during review, before mergi
 
 ```text
 Checks:
-- command: <command>
+- command/tool: <exact command or tool>
+- scope: <files, commits, generated files, and artifacts checked>
+- base/head: <base SHA>..<head SHA>
+- timestamp: <UTC timestamp>
 - result: <pass or details>
+- artifact: <path or none>
 
 Manual check:
 - <what was verified>
